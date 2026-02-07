@@ -7,7 +7,7 @@ Modifica qui le stringhe poi cerca/sostituisci nel codice (o adatta i componenti
 ## Home
 
 ### Hero (3 righe)
-- "Se una tesi si fa in 15 minuti con un'AI, il campo di battaglia è cambiato. Non combattere una guerra vecchia."
+- "Se una tesi si fa in 15 minuti con un'AI, il campo di battaglia è cambiato. L'università non se n'è accorta."
 
 ### Subcopy
 - "Vincere senza combattere. Menti multiple."
