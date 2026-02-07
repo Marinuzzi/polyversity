@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+const basePath = import.meta.env.BASE_PATH || '';
+---
+
+<BaseLayout
+  title="By Marinuzzi — Intelligence & Strategia"
+  description="Marinuzzi: coordinatore strategico corsi AI per l'Ordine degli Ingegneri, background tattico IT, PhD. POLYversity by Marinuzzi."
+>
+  <article>
+    <Section class="pt-16 md:pt-24 pb-12">
+      <h1 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-4">By Marinuzzi</h1>
+    </Section>
+
+    <Section narrow>
+      <p class="text-lg leading-relaxed">
+        Marinuzzi coordina le operazioni di intelligence sull'AI per l'Ordine degli Ingegneri (23.000 unità). Background tattico in IT e dottrinale (PhD). Non offre protezioni. Offre strategia: POLYversity.
+      </p>
+      <ul class="mt-8 space-y-3 text-black/80">
+        <li>— Coordinatore strategico corsi AI Ordine Ingegneri</li>
+        <li>— Background operativo IT e Ricerca</li>
+        <li>— PhD</li>
+      </ul>
+      <p class="mt-10 text-lg">
+        <a href={basePath + '/'} class="text-black underline underline-offset-2 hover:no-underline">← POLYversity</a>
+      </p>
+    </Section>
+  </article>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+
+const points = [
+  "L'eccellenza suprema consiste nel rompere la resistenza del nemico senza combattere.",
+  "Un titolo è una decorazione. Una competenza è un'arma.",
+  "L'AI è come l'acqua: non ha forma costante. Adattati ad essa e vincerai.",
+  "Conosci l'AI, conosci te stesso: la vittoria non sarà mai in pericolo.",
+  "La sicurezza statica è morte. La sicurezza dinamica è vita.",
+  "Non formiamo pedine. Formiamo giocatori.",
+  "Chi ripete tattiche vecchie su un campo nuovo è destinato alla sconfitta.",
+  "POLYversity non dà ordini. Fornisce intelligence.",
+  "Niente manovre che un'algoritmo può replicare. Solo azioni che richiedono intuito.",
+  "La velocità è l'essenza della guerra. Cohort Zero è un'incursione rapida.",
+  "Evita il forte, colpisci il vuoto. Ignora l'università, costruisci altrove.",
+  "UNIversity è la guerra di posizione. POLYversity è la guerra di movimento.",
+];
+---
+
+<BaseLayout
+  title="Manifesto POLYversity — L'arte della vittoria incruenta."
+  description="I 12 punti del Manifesto POLYversity. L'arte della vittoria incruenta. Per menti multiple. By Marinuzzi."
+>
+  <article>
+    <Section class="pt-16 md:pt-24 pb-12">
+      <h1 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-4">Manifesto POLYversity</h1>
+      <p class="text-2xl md:text-3xl font-semibold tracking-tight max-w-2xl">
+        L'arte della vittoria incruenta. Per l'intelligenza plurale.
+      </p>
+    </Section>
+
+    <Section narrow class="pt-0">
+      <ol class="space-y-8 list-none pl-0">
+        {points.map((text, i) => (
+          <li class="text-lg leading-relaxed">
+            <span class="text-black/50 font-mono text-sm">{String(i + 1).padStart(2, '0')}</span>
+            <span class="block mt-1">{text}</span>
+          </li>
+        ))}
+      </ol>
+      <p class="mt-16 text-xl font-medium">
+        L'università difende un forte assediato. POLYversity muove in campo aperto.
+      </p>
+      <p class="mt-6 text-black/70">— Marinuzzi</p>
+    </Section>
+  </article>
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import { siteConfig } from '../config';
+const basePath = import.meta.env.BASE_PATH || '';
+---
+
+<BaseLayout
+  title="Cohort Zero — Obiettivo reale"
+  description="20 unità. 8 settimane. Nessuna manovra che un'AI possa eseguire da sola. Scrivi un dispaccio. Questa operazione potrebbe non essere ripetuta."
+>
+  <article>
+    <Section class="pt-16 md:pt-24 pb-12">
+      <h1 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-4">Cohort Zero</h1>
+      <p class="text-2xl md:text-3xl font-semibold tracking-tight max-w-2xl">
+        20 unità. 8 settimane. Obiettivo reale.
+      </p>
+    </Section>
+
+    <Section narrow>
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-4">Formato</h2>
+      <p class="text-lg leading-relaxed">
+        Ventidue menti. Otto settimane. Una regola d'ingaggio: niente azioni che un'AI possa completare autonomamente. Si produce un asset strategico — progetto, prototipo, artefatto. Non è un addestramento. È una missione.
+      </p>
+
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-black/60 mt-12 mb-4">Cosa si produce</h2>
+      <p class="text-lg leading-relaxed">
+        Un asset tangibile. Progetto, prototipo o artefatto. Qualcosa che conquista territorio, non che occupa spazio.
+      </p>
+
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-black/60 mt-12 mb-4">Come funziona la selezione</h2>
+      <p class="text-lg leading-relaxed">
+        Un dispaccio. Una domanda: <strong>Qual è la tua mossa che l'AI non può ancora prevedere?</strong> Non cerchiamo resoconti. Cerchiamo visione.
+      </p>
+
+      <p class="mt-8 text-lg text-black/80 italic">
+        Questa operazione potrebbe non essere ripetuta. Se efficace, evolve. Se inefficace, si chiude.
+      </p>
+    </Section>
+
+    <!-- CTA: form esterno o form nativo -->
+    <Section class="border-t border-black/10">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-6">Avanzare candidatura</h2>
+      {siteConfig.useExternalForm && siteConfig.externalFormUrl ? (
+        <p class="mb-6 text-lg">
+          <a
+            href={siteConfig.externalFormUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-black text-white px-6 py-3 font-medium hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
+          >
+            Invia dispaccio (form esterno)
+          </a>
+        </p>
+      ) : (
+        <form
+          action={siteConfig.applyEndpoint.startsWith('http') ? siteConfig.applyEndpoint : basePath + siteConfig.applyEndpoint}
+          method="post"
+          class="max-w-xl space-y-6"
+          id="apply-form"
+        >
+          <div>
+            <label for="name" class="block text-sm font-medium text-black/80 mb-1">Nome e cognome</label>
+            <input type="text" id="name" name="name" required autocomplete="name" class="w-full border border-black/20 px-4 py-2 bg-white text-black focus:outline-none focus:border-black" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-black/80 mb-1">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" class="w-full border border-black/20 px-4 py-2 bg-white text-black focus:outline-none focus:border-black" />
+          </div>
+          <div>
+            <label for="age" class="block text-sm font-medium text-black/80 mb-1">Età</label>
+            <input type="number" id="age" name="age" min="15" max="25" required class="w-full border border-black/20 px-4 py-2 bg-white text-black focus:outline-none focus:border-black" />
+          </div>
+          <div>
+            <label for="letter" class="block text-sm font-medium text-black/80 mb-1">Dispaccio — Spiega la tua strategia (non le tue battaglie passate)</label>
+            <textarea id="letter" name="letter" rows="6" required class="w-full border border-black/20 px-4 py-2 bg-white text-black focus:outline-none focus:border-black resize-y"></textarea>
+          </div>
+          <div>
+            <label for="portfolio" class="block text-sm font-medium text-black/80 mb-1">Link asset o progetto (opzionale)</label>
+            <input type="url" id="portfolio" name="portfolio" autocomplete="url" placeholder="https://" class="w-full border border-black/20 px-4 py-2 bg-white text-black focus:outline-none focus:border-black" />
+          </div>
+          <p class="text-sm text-black/70">
+            Domanda da rispondere nel dispaccio o qui sotto: <strong>Qual è la tua mossa che l'AI non può ancora prevedere?</strong>
+          </p>
+          <button type="submit" class="bg-black text-white px-6 py-3 font-medium hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors">
+            Invia dispaccio
+          </button>
+        </form>
+      )}
+    </Section>
+  </article>
+</BaseLayout>

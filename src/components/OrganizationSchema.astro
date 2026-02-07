@@ -1,0 +1,15 @@
+---
+const basePath = import.meta.env.BASE_PATH || '';
+const siteUrl = 'https://polyversity.marinuzzi.it';
+const baseUrl = basePath ? `${siteUrl}${basePath}` : siteUrl;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: 'POLYversity by Marinuzzi',
+  description: "Contro l'università unica. Per menti multiple. Non un corso: un atto culturale per giovani 15-20.",
+  url: baseUrl,
+  sameAs: [],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

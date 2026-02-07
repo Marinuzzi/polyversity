@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+const basePath = import.meta.env.BASE_PATH || '';
+---
+
+<BaseLayout
+  title="POLYversity by Marinuzzi — Vincere senza combattere. Menti multiple."
+  description="POLYversity non codifica chi devi diventare. Ti arma per scoprirlo. Per menti 15-20. Non è un corso. È strategia."
+>
+  <article>
+    <!-- Hero -->
+    <Section class="pt-20 md:pt-28 pb-16 md:pb-24">
+      <div class="max-w-3xl">
+        <p class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight tracking-tight">
+          Se una tesi si fa in 15 minuti con un'AI,<br />
+          il campo di battaglia è cambiato.<br />
+          Non combattere una guerra vecchia.
+        </p>
+        <p class="mt-8 text-lg text-black/80">
+          Vincere senza combattere. Menti multiple.
+        </p>
+      </div>
+    </Section>
+
+    <!-- Avviso -->
+    <Section class="bg-black text-white">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-white/70 mb-6">Strategia</h2>
+      <p class="text-xl md:text-2xl font-medium leading-snug max-w-2xl">
+        Non cerchiamo lo scontro. Cerchiamo il vantaggio. Non è per tutti.
+      </p>
+      <p class="mt-6 text-white/90 prose-poly">
+        Se cerchi un titolo da appendere al muro, stai difendendo un forte vuoto. Qui si lavora su lucidità, velocità e decisione. Il filtro è necessario.
+      </p>
+    </Section>
+
+    <!-- Cos'è -->
+    <Section narrow>
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-6">Cos'è</h2>
+      <p class="text-lg leading-relaxed">
+        POLYversity non codifica chi devi diventare. Ti arma per scoprirlo. Non formiamo soldati. Formiamo strateghi capaci di scegliere, cambiare, ricombinare. L'AI non è il nemico. È il terreno.
+      </p>
+      <div class="mt-10 grid gap-8 sm:grid-cols-2">
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-black/70 mb-3">Qui non troverai</h3>
+          <ul class="space-y-2 text-black/90">
+            <li>— Promesse di vittoria facile</li>
+            <li>— Gradi militari inutili</li>
+            <li>— Esercitazioni sterili</li>
+            <li>— Rassicurazioni tattiche</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-black/70 mb-3">Qui farai</h3>
+          <ul class="space-y-2 text-black/90">
+            <li>— Costruire un arsenale reale (progetto, prototipo, artefatto)</li>
+            <li>— Muoverti in squadra in 8 settimane con 19 alleati</li>
+            <li>— Sfruttare il terreno, cambiare fronte, ricombinare</li>
+            <li>— Esporsi al rischio calcolato, non alla sicurezza illusoria</li>
+          </ul>
+        </div>
+      </div>
+    </Section>
+
+    <!-- Perché cambiare strategia -->
+    <Section class="border-t border-black/10">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-8">Perché cambiare strategia</h2>
+      <ul class="space-y-4 max-w-2xl">
+        <li class="text-lg">— Il modello unico è prevedibile. Il mondo premia l'imprevedibile.</li>
+        <li class="text-lg">— I gradi non garantiscono vittoria. La vittoria si dimostra sul campo.</li>
+        <li class="text-lg">— L'AI ridefinisce le regole d'ingaggio. Chi combatte come ieri ha già perso.</li>
+        <li class="text-lg">— La sicurezza non è una trincea. È la capacità di manovra.</li>
+      </ul>
+    </Section>
+
+    <!-- Prima di arruolarti -->
+    <Section narrow class="bg-black/5">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-8">Prima di arruolarti</h2>
+      <ol class="space-y-6 list-none pl-0">
+        <li class="text-lg font-medium">1. Se il terreno cambiasse domani, sapresti muoverti senza mappa?</li>
+        <li class="text-lg font-medium">2. Sai indicare una tua forza reale che non dipende da un ordine ricevuto?</li>
+        <li class="text-lg font-medium">3. Se un'AI eseguisse meglio di te la tua tattica attuale, quale sarebbe la tua mossa?</li>
+        <li class="text-lg font-medium">4. Preferisci essere difeso o essere vittorioso?</li>
+      </ol>
+      <p class="mt-10 text-lg">
+        Se ti sembrano dure, ritirati. Se ti stimolano, avanza.
+      </p>
+    </Section>
+
+    <!-- CTA Cohort Zero -->
+    <Section class="border-t border-black/10">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-black/60 mb-6">Avanzare candidatura</h2>
+      <p class="text-2xl md:text-3xl font-semibold tracking-tight">Cohort Zero</p>
+      <p class="mt-4 text-lg text-black/80 max-w-xl">
+        20 posti. 8 settimane. Nessuna manovra che un'AI possa eseguire da sola. Scrivi un dispaccio. Spiega la tua strategia, non le tue battaglie passate.
+      </p>
+      <p class="mt-8">
+        <a href={`${basePath}/cohort-zero`} class="inline-block bg-black text-white px-6 py-3 font-medium hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors">
+          Avanzare candidatura
+        </a>
+      </p>
+    </Section>
+  </article>
+</BaseLayout>
